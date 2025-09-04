@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎂 Happy Birthday 🎉</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background: url("https://i.pinimg.com/736x/c6/af/48/c6af48ca70153ec4eb02e252378f99e2.jpg") no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: white;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
+      text-shadow: 2px 2px 5px black;
+    }
+    .belated {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #ffcccb;
+      text-shadow: 1px 1px 4px black;
+      margin-bottom: 1rem;
+    }
+    .emoji {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px black;
+    }
+    /* Gym image on the right */
+    .gym-img {
+      width: 200px;
+      border-radius: 12px;
+      margin: 10px;
+      float: right;
+    }
+    .gallery {
+      display: none;
+      margin-top: 1rem;
+    }
+    .gallery img {
+      width: 280px;   /* medium size */
+      max-width: 90%;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .surprise {
+      font-size: 2rem;
+      color: gold;
+      font-weight: bold;
+      display: none;
+      animation: pop 1.5s ease-out forwards;
+      text-shadow: 2px 2px 6px black;
+    }
+    @keyframes pop {
+      0% { transform: scale(0.2); opacity: 0; }
+      50% { transform: scale(1.5); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 12px;
+      background: crimson;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: darkred;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Happy Birthdayyy 🎉</h1>
+  <div class="belated">Belated wishes ✨</div>
+
+  <div class="emoji">🎁🍫🎊💪🏋️‍♂️🔥</div>
+
+  <!-- Text directly on Ferrari background -->
+  <p>twennny yay!!🥳🏋️‍♂️🔥 </p>
+  <img class="gym-img" src="https://i.pinimg.com/736x/3f/3d/b8/3f3db8e4c64d1ee9e69c7fec91c45556.jpg" alt="Gym Ghibli Art">
+
+  <!-- Gifts button -->
+  <button onclick="showSurprise()">🎁 Open 🎁</button>
+
+  <!-- Surprise text -->
+  <div id="surprise" class="surprise">🎉 Surpriseee!!! 🎊</div>
+
+  <!-- Gift Gallery -->
+  <div id="gallery" class="gallery">
+    <img src="https://i.pinimg.com/1200x/42/ea/db/42eadb84e4b19d170a3e9d9bb57483d0.jpg" alt="Gift">
+  </div>
+
+  <script>
+    function showSurprise() {
+      const surprise = document.getElementById("surprise");
+      const gallery = document.getElementById("gallery");
+
+      surprise.style.display = "block";
+      surprise.style.animation = "pop 1.5s ease-out forwards";
+
+      setTimeout(() => {
+        surprise.style.display = "none";
+        gallery.style.display = "block"; 
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
